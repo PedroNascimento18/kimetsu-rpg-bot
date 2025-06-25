@@ -1,10 +1,9 @@
 const venom = require('venom-bot');
 
 venom.create({
-  session: 'kimetsu-session',
-  headless: false,
-  useChrome: true,
-  executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
+  session: 'kimetsu-session',  // pasta para salvar sessão
+  headless: true,              // Modo headless obrigatório no servidor
+  useChrome: false,            // Usar Chromium interno do Puppeteer
 })
 .then(client => start(client))
 .catch(error => console.log(error));
